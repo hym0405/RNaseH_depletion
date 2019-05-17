@@ -1,2 +1,2 @@
 # RNaseH_depletion
-Scalable RNase H based rRNA depletion for bacterial transcriptomics
+Scalable and cost-effective ribonuclease-based rRNA depletion for bacterial transcriptomics
