@@ -8,7 +8,7 @@ Jupyter Notebook:
 
 ## Dependencies
 
-* Python 2.7, jupyter 4.3.0 
+* Python 2.7, Jupyter 4.3.0 
 	- panda
 	- numpy
 	- _NB: Above libraries are bundled together in the [Anaconda distribution](https://www.continuum.io/downloads)_
