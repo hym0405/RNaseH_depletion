@@ -13,4 +13,4 @@ Jupyter Notebook:
 	- numpy
 	- _NB: Above libraries are bundled together in the [Anaconda distribution](https://www.continuum.io/downloads)_
 
-* Muscle: MUltiple Sequence Comparison by Log-Expectation
+* [Muscle: MUltiple Sequence Comparison by Log-Expectation](https://www.drive5.com/muscle/)
