@@ -13,5 +13,5 @@ Jupyter Notebook:
 	- numpy
 	- _NB: Above libraries are bundled together in the [Anaconda distribution](https://www.continuum.io/downloads)_
 
-* Required for probe identitiy calculation only: [Muscle (MUltiple Sequence Comparison by Log-Expectation(https://www.drive5.com/muscle/)
+* Required for probe identitiy calculation only: [Muscle (MUltiple Sequence Comparison by Log-Expectation)](https://www.drive5.com/muscle/)
 	- Executable file of Muscle that compatible with your OS should be put to ./bin or other place specified in 1.calculate_probe_identity.ipynb
