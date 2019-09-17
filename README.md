@@ -176,4 +176,7 @@ chmod +x ./1.calculate_probe_identity.py
 				-o ./output/probeIdentity.probe_dorei \
 				-m ./bin/muscle
 ```
+<<<<<<< HEAD
 
+=======
+>>>>>>> 85d492c0ef1b4f37c6a8cbca3ca23b920ac015be
