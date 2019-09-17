@@ -168,12 +168,11 @@ uniformis_16S	111	160	dorei_16S_27	50	10	0.2
 ...
 ```
 
-
-
 ### Example
 ```
-chmod +x ./0.design_probe.py
-./0.design_probe.py -i ./data/rRNA_sequence/rRNA_sequence.dorei.fa \
-		-o ./output/rRNA_probe.dorei.tsv \
-		-l 50
+chmod +x ./1.calculate_probe_identity.py
+./1.calculate_probe_identity.py -t ./data/rRNA_sequence/rRNA_sequence.uniformis.fa \
+		-p ./output/rRNA_probe.dorei.tsv
+		-o ./output/probeIdentity.probe_dorei \
+		-m ./bin/muscle
 ```
