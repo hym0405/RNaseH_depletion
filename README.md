@@ -55,7 +55,7 @@ optional arguments:
 
 **rRNA sequence:** 16S and 23S rRNA sequence in FASTA format and all rRNA sequences should be labelled as [SampleID]_16S and [SampleID]_23S
 
-**** We used [Prokka](https://github.com/tseemann/prokka) to predict 16S and 23S rRNA sequences of bacterial species****
+****In our paper, [Prokka](https://github.com/tseemann/prokka) is used to predict 16S and 23S rRNA sequences of bacterial species****
 
 ****[example: ./data/rRNA_sequence/rRNA_sequence.dorei.fa]****
 
