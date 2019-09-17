@@ -1,10 +1,12 @@
 # Scalable and cost-effective ribonuclease-based rRNA depletion for bacterial transcriptomics
 
-Jupyter Notebook:
+Jupyter Notebook for probe design and evaluation:
 
 * **0.design_probe.ipynb**: design probe libraries for target 16S and 23S rRNA sequence
 
 * **1.calculate_probe_identity.ipynb**: calculate probe identity to various different 16S and 23S sequences to evaluate the ability of pools to be applied to different sequences
+
+* **2.predict_probe_offtarget.sh**: predict potential off-targets for probe libraries
 
 ## Dependencies
 
