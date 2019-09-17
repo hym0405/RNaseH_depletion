@@ -2,9 +2,9 @@
 
 Jupyter Notebook for probe design and evaluation:
 
-* **0.design_probe.ipynb**: design probe libraries for target 16S and 23S rRNA sequence
+* **0.design_probe.py**: design probe libraries for target 16S and 23S rRNA sequence
 
-* **1.calculate_probe_identity.ipynb**: calculate probe identity to various different 16S and 23S sequences to evaluate the ability of pools to be applied to different sequences
+* **1.calculate_probe_identity.py**: calculate probe identity to various different 16S and 23S sequences to evaluate the ability of pools to be applied to different sequences
 
 * **2.predict_probe_offtarget.sh**: predict potential off-targets for probe libraries
 
@@ -13,6 +13,7 @@ Jupyter Notebook for probe design and evaluation:
 * Python 2.7, Jupyter 4.3.0 
 	- panda
 	- numpy
+	- argparse
 	- _NB: Above libraries are bundled together in the [Anaconda distribution](https://www.continuum.io/downloads)_
 
 
@@ -20,7 +21,7 @@ Jupyter Notebook for probe design and evaluation:
 	- **Required for probe identity calculation only**
 	- Executable file of Muscle that compatible with your operating system should be put into ./bin or other place specified in 1.calculate_probe_identity.ipynb
 	
-* [NCBI BLAST+ executables 2.9.0](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
+* [NCBI BLAST+ Executables 2.9.0](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 	- **Required for probe off-targets prediction only**
 	- Executable file of makeblastdb and blastn that compatible with your operating system should be put into ./bin or other place specified in 2.predict_probe_offtarget.sh
 	
