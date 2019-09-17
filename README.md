@@ -55,7 +55,9 @@ optional arguments:
 
 **rRNA sequence:** 16S and 23S rRNA sequence in FASTA format and all rRNA sequences should be labelled as [SampleID]_16S and [SampleID]_23S
 
-[example: ./data/rRNA_sequence/rRNA_sequence.dorei.fa]
+**** We used [Prokka](https://github.com/tseemann/prokka) to predict 16S and 23S rRNA sequences of bacterial species***
+
+****[example: ./data/rRNA_sequence/rRNA_sequence.dorei.fa]****
 
 ```
 >dorei_16S
@@ -66,9 +68,9 @@ GAAAGTAAAGAAGGGCGC...
 ...
 ```
 ### Output format
-**** Probe sequences will be saved as a tab-delimited table
+**** Probe sequences will be saved as a tab-delimited table****
 
-[example: ./output/rRNA_probe.dorei.tsv]
+****[example: ./output/rRNA_probe.dorei.tsv]****
 ```
 rRNA_label      probe_ID        probe_sequence
 dorei_16S       dorei_16S_0     AGGTGTTCCAGCCGC...
@@ -79,5 +81,17 @@ dorei_23S       dorei_23S_0     TAAGGAAAGTGGACG...
 dorei_23S       dorei_23S_1     CAACGTCGTAGTCTA...
 dorei_23S       dorei_23S_2     TCGTACTTAGATGCT...
 ...
+```
+
+### Example
+```
+chmod +x ./0.design_probe.py
+./0.design_probe.py -i ./data/rRNA_sequence/rRNA_sequence.dorei.fa \
+		-o ./output/rRNA_probe.dorei.tsv \
+		-l 50
+```
+
+
+
 
 
