@@ -178,3 +178,77 @@ chmod +x ./1.calculate_probe_identity.py
 				-o ./output/probeIdentity.probe_dorei \
 				-m ./bin/muscle
 ```
+
+## Predict potential off-targets for probe libraries
+### Description
+```
+usage: 2.predict_probe_offtarget.py [-h] [-t TRANSCRIPT] [-r RRNA] [-p PROBE]
+                                    [-pf {TSV,FASTA}] [-o OUTPUT_PREFIX]
+                                    [-mb MAKEBLASTDB_PATH] [-bn BLASTN_PATH]
+                                    [-br BURST_PATH]
+
+Predict potential off-targets for probe libraries
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -t TRANSCRIPT, --transcript TRANSCRIPT
+                        Path to transcript sequences. All transcript sequences
+                        should be saved in FASTA format
+  -r RRNA, --rRNA RRNA  Path to list of rRNA transcript IDs
+  -p PROBE, --probe PROBE
+                        Path to probe sequences to be evaluated. Probe
+                        sequences can be saved in either TSV or FASTA format
+                        (should be specified in probe format)
+  -pf {TSV,FASTA}, --probe_format {TSV,FASTA}
+                        Format of probe sequences, either TSV or FASTA
+                        [default: TSV]
+  -o OUTPUT_PREFIX, --output_prefix OUTPUT_PREFIX
+                        Prefix of output predicted off-targets file. Results
+                        of BLASTN and BURST will be saved in
+                        [output_prefix].BLAST.tsv and
+                        [output_prefix].BURST.tsv
+  -mb MAKEBLASTDB_PATH, --makeblastdb_path MAKEBLASTDB_PATH
+                        Path to executable file of makeblastdb (NCBI-BLAST)
+                        [default: ./bin/makeblastdb]
+  -bn BLASTN_PATH, --blastn_path BLASTN_PATH
+                        Path to executable file of blastn (NCBI-BLAST)
+                        [default: ./bin/blastn]
+  -br BURST_PATH, --burst_path BURST_PATH
+                        Path to executable file of burst [default:
+                        ./bin/burst]
+```
+### Input format
+
+**transcript sequences:** All transcript sequences should be saved in FASTA format
+
+****[example: ./data/transcriptome_annotation/dorei.ffn]****
+
+```
+>GMBNIAIB_00001 Chromosomal replication initiator protein DnaA
+ATGATTGAAAACGATCACGTCGTTTTATGGGGTCGTTGTCTGAACATTATCAGAGACAAC
+GTACCTGAAACGACCTTTAAAACGTGGTTTGAGCCTATCGTACCGCTTAAATATGAGGAC
+...
+>GMBNIAIB_00002 FMN reductase [NAD(P)H]
+ATGGAATCGATAAATAATAGACGGACGATCCGTAAATATAAGCAGGAAGATATTTCTGCT
+TCTTTGTTAAATGATTTGCTTGAAAAGGCATTCCGTGCTTCTACAATGGGCAATATGCAA
+...
+>GMBNIAIB_00003 Vitamin B12-dependent ribonucleoside-diphosphate reductase
+GTGGAAAAACAAACGTACACCTATGACGAAGCTTTTGAAGCATCTTTACAATACTTCAAA
+GGTGATGAACTTGCTGCAAGGGTTTGGGTAAACAAATATGCAGTAAAAGATTCTTTCGGG
+...
+```
+
+**list of rRNA transcript IDs:**
+
+****[example: ./data/transcriptome_annotation/dorei.rRNA.list]****
+```
+GMBNIAIB_00241
+GMBNIAIB_00242
+GMBNIAIB_00245
+...
+```
+
+**probe sequences to be evaluated:**: Probe sequences can be provided in ****either TSV or FASTA format****
+
+1. TSV format: tab-delimited table and the format is exactly same as the output of 0.design_probe.py
+2. FASTA format: [example: ./output/rRNA_probe.dorei.tsv]
