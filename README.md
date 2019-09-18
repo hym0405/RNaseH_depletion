@@ -248,7 +248,7 @@ GMBNIAIB_00245
 ...
 ```
 
-**probe sequences to be evaluated:**: Probe sequences can be provided in ****either TSV or FASTA format****
+**probe sequences to be evaluated:** Probe sequences can be provided in ****either TSV or FASTA format****
 
 1. TSV format: tab-delimited table and the format is exactly same as the output of 0.design_probe.py
 2. FASTA format: [example: ./output/rRNA_probe.dorei.fa]
