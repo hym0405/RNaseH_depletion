@@ -2,11 +2,13 @@
 
 Tools for probe design and evaluation (Jupyter notebooks can be found in ./jupyter_notebook):
 
+We have tested these scripts on Linux and MacOS
+
 * **0.design_probe.py**: design probe libraries for target 16S and 23S rRNA sequence
 
 * **1.calculate_probe_identity.py**: calculate probe identity to various different 16S and 23S sequences to evaluate the ability of pools to be applied to different sequences
 
-* **2.predict_probe_offtarget.sh**: predict potential off-targets for probe libraries
+* **2.predict_probe_offtarget.py**: predict potential off-targets for probe libraries
 
 ## Dependencies
 
