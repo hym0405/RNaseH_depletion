@@ -251,4 +251,32 @@ GMBNIAIB_00245
 **probe sequences to be evaluated:**: Probe sequences can be provided in ****either TSV or FASTA format****
 
 1. TSV format: tab-delimited table and the format is exactly same as the output of 0.design_probe.py
-2. FASTA format: [example: ./output/rRNA_probe.dorei.tsv]
+2. FASTA format: [example: ./output/rRNA_probe.dorei.fa]
+
+
+### Output format
+
+****Results of BLASTN and BURST will be saved in tab-delimited [output_prefix].BLAST.tsv and [output_prefix].BURST.tsv****
+
+****[example: ./output/offtarget.longicatena.BURST.tsv]****
+
+```
+probeID			transcript(off-target)
+longicatena_23S_11      JDJECPLG_03071
+longicatena_23S_10      JDJECPLG_03071
+longicatena_23S_12      JDJECPLG_03071
+...
+```
+
+### Example
+```
+chmod +x ./2.predict_probe_offtarget.py
+./2.predict_probe_offtarget.py -t ./data/transcriptome_annotation/longicatena.ffn \
+				-r ./data/transcriptome_annotation/longicatena.rRNA.list \
+				-p ./output/rRNA_probe.longicatena.tsv \
+				-pf TSV \
+				-o ./output/offtarget.longicatena \
+				-mb ./bin/makeblastdb \
+				-bn ./bin/blastn \
+				-br ./bin/burst
+```
