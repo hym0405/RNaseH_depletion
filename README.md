@@ -32,7 +32,7 @@ We have tested these scripts on Linux and MacOS
 	- Executable file of burst that compatible with your operating system should be put into ./bin or other place specified in 2.predict_probe_offtarget.sh
 
 
-## Design probe libraries for 16S and 23S rRNA sequence
+## Design probe libraries for 16S and 23S rRNA sequences
 
 ### Description
 ```
