@@ -43,7 +43,11 @@ def designProbe(seq, probeLength):
     probes_final.append(probes[0] + probes[1])
     for i in range(len(probes) - 4):
         probes_final.append(probes[i + 2])
-    probes_final.append(probes[-2] + probes[-1])
+    if len(seq) % probeLength != 0:
+        probes_final.append(probes[-2] + probes[-1])
+    else:
+        probes_final.append(probes[-2])
+        probes_final.append(probes[-1])
     return probes_final
 
 #######################
