@@ -88,7 +88,7 @@ dorei_23S       dorei_23S_2     TCGTACTTAGATGCT...
 ### Example
 ```
 chmod +x ./0.design_probe.py
-./0.design_probe.py -i ./data/rRNA_sequence/rRNA_sequence.dorei.fa \
+python2 ./0.design_probe.py -i ./data/rRNA_sequence/rRNA_sequence.dorei.fa \
 		-o ./output/rRNA_probe.dorei.tsv \
 		-l 50
 ```
@@ -173,7 +173,7 @@ uniformis_16S	111	160	dorei_16S_27	50	10	0.2
 ### Example
 ```
 chmod +x ./1.calculate_probe_identity.py
-./1.calculate_probe_identity.py -t ./data/rRNA_sequence/rRNA_sequence.uniformis.fa \
+python2 ./1.calculate_probe_identity.py -t ./data/rRNA_sequence/rRNA_sequence.uniformis.fa \
 				-p ./output/rRNA_probe.dorei.tsv
 				-o ./output/probeIdentity.probe_dorei \
 				-m ./bin/muscle
@@ -271,7 +271,7 @@ longicatena_23S_12      JDJECPLG_03071
 ### Example
 ```
 chmod +x ./2.predict_probe_offtarget.py
-./2.predict_probe_offtarget.py -t ./data/transcriptome_annotation/longicatena.ffn \
+python2 ./2.predict_probe_offtarget.py -t ./data/transcriptome_annotation/longicatena.ffn \
 				-r ./data/transcriptome_annotation/longicatena.rRNA.list \
 				-p ./output/rRNA_probe.longicatena.tsv \
 				-pf TSV \
