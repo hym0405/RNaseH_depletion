@@ -16,7 +16,7 @@ We have tested these scripts on Linux and MacOS
 	- panda
 	- numpy
 	- argparse
-	- _NB: Above libraries are bundled together in the [Anaconda distribution](https://www.continuum.io/downloads)_
+	- _NB: Above libraries are bundled together in the [Anaconda distribution](https://www.anaconda.com/distribution)_
 
 
 * [Muscle: MUltiple Sequence Comparison by Log-Expectation](https://www.drive5.com/muscle/)
