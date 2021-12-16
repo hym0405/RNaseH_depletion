@@ -99,11 +99,17 @@ def findProbeMap(alignment_seq, original_seq, probe_set):
     for e in probeLength_list:
         probeLength_alignment.append(0)
     index = 0
+
     for e in alignment_seq:
-        probeIndex_alignment.append(probeIndex_original[index])
-        probeLength_alignment[probeIndex_original[index]] += 1
+        if e == "-" and index >= len(probeIndex_original):
+            probeIndex_alignment.append(probeIndex_original[index - 1]) 
+            probeLength_alignment[probeIndex_original[index - 1]] += 1
+        else:
+            probeIndex_alignment.append(probeIndex_original[index])
+            probeLength_alignment[probeIndex_original[index]] += 1
         if e != "-":
-            index += 1  
+            index += 1
+	
     return probeIndex_alignment, probeLength_alignment
 def findTargetMap(alignment_seq, location):
     count = 0
